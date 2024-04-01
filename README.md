@@ -139,7 +139,7 @@ git clone https://github.com/robertkirkman/sm64ex-coop.git
 ```
 lalu klik [Enter].
 
-Ini akan mengklon repositori sm64ex-coop untuk mengkompilasi game agar berjalan di android.
+Ini akan mengklon repositori OWOKITTY untuk mengkompilasi game agar berjalan di android.
 
 ![Gambar](https://i.imgur.com/dWVKja0.jpeg)
 __________________________________________________
@@ -213,7 +213,58 @@ cp build/us_pc/sm64.us.apk /storage/emulated/0
 ```
 lalu klik [Enter].
 
-Keluar dari Termux dengan Tekan `Ctrl` + `D` untuk logout, lalu buka File Manager kalian untuk menginstal Gamenya.
+Keluar dari Termux dengan Tekan `Ctrl` + `D` untuk logout, atau ketikan perintah `exit` untuk keluar, lalu buka File Manager kalian untuk menginstal Gamenya.
 
-![Gambar]()
+![Gambar](https://i.imgur.com/cP9dt0V.png)
+__________________________________________________
+
+## Mengupdate Versi game
+
+Jika suatu hari gamenya mengupdate ke versi terbaru, kita bisa mengupdatenya sendiri.
+
+untuk itu kalian jangan menghapus termux ataupun file didalamnya karena akan berguna untuk mengupdate gamenya
+
+Ketikan atau salin perintah berikut:
+```bash
+yes|pkg update && yes|pkg upgrade
+```
+lalu klik [Enter].
+
+lalu Ketikan atau salin perintah:
+```bash
+cd sm64ex-coop
+```
+lalu klik [Enter].
+
+kemudian hapus kompilasi versi sebelumnya dengan perintah:
+```bash
+make distclean
+```
+lalu klik [Enter].
+
+lalu update file game, git, dan juga file coopnet nya juga dengan perintah:
+```bash
+git pull
+```
+lalu klik [Enter].
+
+kemudian perintah:
+```bash
+git submodule update --init --recursive
+```
+lalu klik [Enter].
+
+lalu kompilasikan gamenya dengan perintah:
+```bash
+make
+```
+lalu klik [Enter].
+
+kini tinggal mengklon gamenya ke dalam file direktori perangkat dengan perintah:
+```bash
+cp build/us_pc/sm64.us.apk /storage/emulated/0
+```
+lalu klik [Enter].
+
+Buka File Manager dan instal gamenya seperti sebelumnya, dan kalian punya gamenya dalam versi terbaru.
 __________________________________________________
