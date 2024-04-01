@@ -1,6 +1,6 @@
 ## Cara Mengkompilasi sm64ex coop android
 
-ini adalah tutorial berbahasa indonesia dari repository [sm64ex-coop-32-64-bits XxCmbRxX](https://github.com/XxCmbRxX/sm64ex-coop-32-64-Bits).
+ini adalah tutorial berbahasa indonesia dari [sm64ex-coop-32-64-bits](https://github.com/XxCmbRxX/sm64ex-coop-32-64-Bits).
 
 ### Persyaratan
 
@@ -30,7 +30,7 @@ Yang paling penting adalah sebuah file klon daei game `Super Mario 64(USA).z64` 
 Sayangnya saya tidak dapat membagikan file tersebut karna suatu alasan. Jadi silahkan cari dari internet.
 
 >[!important]
-> Jika kau mengunduh game berformat n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi error.
+> Jika kau mengunduh game berformat n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi eror.
 __________________________________________________
 
 **File Manager**
@@ -52,9 +52,9 @@ Untuk file game `Super Mario 64(USA).z64` ubah menjadi `baserom.us.z64`, lalu ta
 > Agar saat proses pengkompilasi tidak mengalami masalah, **jangan keluar dari aplikasi Termux**, kemudian **jangan menutup ataupun mengunci layar pernangkat**.
 __________________________________________________
 
-## Pengkompilasi
+## Persiapan
  
-Baiklah jika syarat diatas sudah terpenuhi maka saatnya proses pengkompilasi
+jika syarat diatas sudah terpenuhi, selanjutnya untuk persiapan
 
 **PERINTAH PERTAMA**
 
@@ -70,7 +70,7 @@ Maka akan muncul sebuah tampilah pilihan Mirror, pilih `Single mirror | Choose a
 
 tekan [OK].
 
-lalu akan muncul tampilan pilihan Repository, pilih `Mirror by Tsinghua University TUNA Association | mirrors.tuna.tsinghua.edu.cn`.
+lalu akan muncul tampilan pilihan Repositori, pilih `Mirror by Tsinghua University TUNA Association | mirrors.tuna.tsinghua.edu.cn`.
 
 tekan [OK].
 
@@ -109,7 +109,7 @@ pkg remove libglvnd
 ```
 lalu klik [Enter].
 
-Dengan perintah ini kamu akan menghapus sebuah alat bernama [*`GL Vendor-Neutral Dispatch`*](https://github.com/NVIDIA/libglvnd). kamu bisa mengklik jika ingin inormasi lebih lanjut.
+Dengan perintah ini kamu akan menghapus sebuah alat bernama [*`GL Vendor-Neutral Dispatch`*](https://github.com/NVIDIA/libglvnd). kamu bisa mengklik jika ingin informasi lebih lanjut.
 
 > ada beberapa hal dalam alat ini yang menyebabkan kesalahan dan masalah besar saat mengkompilasi, jadi perlu untuk dihapus.
 
@@ -131,4 +131,89 @@ Jika diminta untuk mengkonfirmasi ketik `Y` lalu klik [Enter].
 ![Gambar](https://i.imgur.com/VcdzPBC.jpeg)
 __________________________________________________
 
+**PERINTAH KE-ENAM**
 
+Ketikan atau salin perintah berikut:
+```bash
+git clone https://github.com/robertkirkman/sm64ex-coop.git
+```
+lalu klik [Enter].
+
+Ini akan mengklon repositori sm64ex-coop untuk mengkompilasi game agar berjalan di android.
+
+![Gambar](https://i.imgur.com/dWVKja0.jpeg)
+__________________________________________________
+
+**PERINTAH KE-TUJUH**
+
+Ketikan atau salin perintah berikut:
+```bash
+cp /storage/emulated/0/baserom.us.z64 sm64ex-coop/baserom.us.z64
+```
+lalu klik [Enter].
+
+ini akan mengklon file game dari file direktori perangkat ke repositori sm64ex coop dengan nama yang sama `baserom.us.z64`.
+
+![Gambar](https://i.imgur.com/y2clxLx.jpeg)
+__________________________________________________
+
+**PERINTAH KE-DELAPAN**
+
+Ketikan atau salin perintah berikut
+```bash
+cd sm64ex-coop
+```
+lalu klik [Enter].
+
+ini akan membuka repositori sm64ex coop dari dalam Termux.
+
+![Gambar](https://i.imgur.com/twIOFYj.jpeg)
+__________________________________________________
+
+**PERINTAH KE-SEMBILAN**
+
+Ketikan atau salin perintah berikut:
+```bash
+git pull
+```
+lalu klik [Enter].
+
+ini hanya akan memperbarui game dan git yang telah di pasang `jika diperlukan`.
+
+__________________________________________________
+
+**PERINTAH KE-SEPULUH**
+
+Ketikan atau salin perintah berikut:
+```bash
+git submodule update --init --recursive
+```
+lalu klik [Enter].
+
+ini akan mengupdate file CoopNet yang dibutuhkan sm64ex coop untuk tersambung ke server. agar terhindar dari masalah atau eror saat proses kompilasi.
+__________________________________________________
+
+## Mengompilasi Game
+
+Setelah persiapan diatas telah terpenuhi saatnya untuk mengompilasi game agar dapat dimainkan di android
+
+Ketikan atau salin perintah berikut:
+```bash
+make
+```
+lalu klik [Enter].
+
+Setelah perintah dijalankan itu akan membutuhkan waktu yg sedikit lama. Jika tidak ada kesalahan atau eror maka proses kompilasi berhasil.
+
+Selanjutnya kita perlu mengklon sm64ex coop yaitu `sm64ex.us.apk`ke file direktori perangkat.
+
+Ketikan atau salin perintah berikut:
+```bash
+cp build/us_pc/sm64.us.apk /storage/emulated/0
+```
+lalu klik [Enter].
+
+Keluar dari Termux dengan Tekan `Ctrl` + `D` untuk logout, lalu buka File Manager kalian untuk menginstal Gamenya.
+
+![Gambar]()
+__________________________________________________
