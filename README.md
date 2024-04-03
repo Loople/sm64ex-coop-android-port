@@ -59,7 +59,7 @@ jika syarat diatas sudah terpenuhi, selanjutnya untuk persiapan
 **PERINTAH PERTAMA**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 termux-change-repo
 ```
 lalu klik [Enter].
@@ -80,7 +80,7 @@ __________________________________________________
 **PERINTAH KE-DUA**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 yes|pkg update && yes|pkg upgrade
 ```
 lalu klik [Enter].
@@ -91,7 +91,7 @@ __________________________________________________
 **PERINTAH KE-TIGA**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 termux-setup-storage
 ```
 lalu klik [Enter].
@@ -104,7 +104,7 @@ __________________________________________________
 **PERINTAH KE-EMPAT**
 
 Keyikan atau salin perintah berikut:
-```bash
+```
 pkg remove libglvnd
 ```
 lalu klik [Enter].
@@ -119,7 +119,7 @@ __________________________________________________
 **PERINTAH KE-LIMA**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 pkg install git wget make python getconf zip apksigner clang binutils libglvnd-dev aapt which
 ```
 lalu klik [Enter].
@@ -134,7 +134,7 @@ __________________________________________________
 **PERINTAH KE-ENAM**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 git clone https://github.com/robertkirkman/sm64ex-coop.git
 ```
 lalu klik [Enter].
@@ -147,7 +147,7 @@ __________________________________________________
 **PERINTAH KE-TUJUH**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 cp /storage/emulated/0/baserom.us.z64 sm64ex-coop/baserom.us.z64
 ```
 lalu klik [Enter].
@@ -160,7 +160,7 @@ __________________________________________________
 **PERINTAH KE-DELAPAN**
 
 Ketikan atau salin perintah berikut
-```bash
+```
 cd sm64ex-coop
 ```
 lalu klik [Enter].
@@ -173,7 +173,7 @@ __________________________________________________
 **PERINTAH KE-SEMBILAN**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 git pull
 ```
 lalu klik [Enter].
@@ -185,7 +185,7 @@ __________________________________________________
 **PERINTAH KE-SEPULUH**
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 git submodule update --init --recursive
 ```
 lalu klik [Enter].
@@ -198,7 +198,7 @@ __________________________________________________
 Setelah persiapan diatas telah terpenuhi saatnya untuk mengompilasi game agar dapat dimainkan di android
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 make
 ```
 lalu klik [Enter].
@@ -208,7 +208,7 @@ Setelah perintah dijalankan itu akan membutuhkan waktu yg sedikit lama. Jika tid
 Selanjutnya kita perlu mengklon sm64ex coop yaitu `sm64ex.us.apk`ke file direktori perangkat.
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 cp build/us_pc/sm64.us.apk /storage/emulated/0
 ```
 lalu klik [Enter].
@@ -225,43 +225,43 @@ Jika suatu hari gamenya mengupdate ke versi terbaru, kita bisa mengupdatenya sen
 untuk itu kalian jangan menghapus termux ataupun file didalamnya karena akan berguna untuk mengupdate gamenya
 
 Ketikan atau salin perintah berikut:
-```bash
+```
 yes|pkg update && yes|pkg upgrade
 ```
 lalu klik [Enter].
 
 lalu Ketikan atau salin perintah:
-```bash
+```
 cd sm64ex-coop
 ```
 lalu klik [Enter].
 
 kemudian hapus kompilasi versi sebelumnya dengan perintah:
-```bash
+```
 make distclean
 ```
 lalu klik [Enter].
 
 lalu update file game, git, dan juga file coopnet nya juga dengan perintah:
-```bash
+```
 git pull
 ```
 lalu klik [Enter].
 
 kemudian perintah:
-```bash
+```
 git submodule update --init --recursive
 ```
 lalu klik [Enter].
 
 lalu kompilasikan gamenya dengan perintah:
-```bash
+```
 make
 ```
 lalu klik [Enter].
 
 kini tinggal mengklon gamenya ke dalam file direktori perangkat dengan perintah:
-```bash
+```
 cp build/us_pc/sm64.us.apk /storage/emulated/0
 ```
 lalu klik [Enter].
