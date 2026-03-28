@@ -16,40 +16,35 @@ Diperlukan aplikasi Termux, sebuah aplikasi Terminal Linux untuk Android.
 
 Bisa didapatkan di internet, namun disarankan menggunakan [Termux dari F-droid](https://f-droid.org/repo/com.termux_118.apk).
 
-> [!NOTE]
-> Aplikasi Termux dari PlayStore sudah kadaluarsa dan tidak berfungsi, jadi disarankan menggunakan Termux dari link diatas.
-
->[!TIP]
-> Disarankan menggunakan Termux dari F-droid karena dibutuhkan Repository yang berbeda.
+> [!Catatan]
+> Aplikasi Termux dari PlayStore sudah kadaluarsa dan tidak berfungsi, jadi disarankan menggunakan Termux dari tautan diatas.
 __________________________________________________
 
 **ROM**
 
-Yang paling penting adalah sebuah file klon daei game `Super Mario 64(USA).z64` untuk membuatnya dapat dimainkan di android. ingat untuk mengunduh game berformat `.z64`.
+Yang paling penting adalah sebuah file klon dari permainannya dengan format `Super Mario 64(USA).z64` untuk diporting agar dapat dimainkan di android. Ingat untuk mengunduh game berformat `.z64`.
 
-Sayangnya saya tidak dapat membagikan file tersebut karna suatu alasan. Jadi silahkan cari dari internet.
+Sayangnya saya tidak dapat membagikan file tersebut karna alasan [Hak Cipta](https://id.wikipedia.org/wiki/Hak_cipta). Jadi silahkan cari dari internet.
 
->[!important]
-> Jika kau mengunduh game berformat n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi eror.
+>[!Penting]
+> Jika kamu mengunduh file permainan dengan format n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi eror.
 __________________________________________________
 
 **File Manager**
 
-Ada banyak sekali File Manager yang dapat digunakan, seperti [**MT Manager**](https://d-11.winudf.com/b/APK/YmluLm10LnBsdXNfMjQwMzA2NjNfNjFhNGM0NWI?_fn=TVQgTWFuYWdlcl8yLjE1LjBfQXBrcHVyZS5hcGs&_p=YmluLm10LnBsdXM%3D&download_id=otr_1868209534382651&is_hot=true&k=d185795f3a53b5bb03a6d18c7120d7ad660b1857), [**My Files**](https://play.google.com/store/apps/details?id=com.myfiles.filefolder.filemanager), [**Es File Explorer**](https://dw.uptodown.com/dwn/FfozR53P70_m9L4wu2-vW6stssHC6mph3bIPvMoUav-jJ4btU7ZwB-PlXwZeSiYCJB70pcKdAUg403Nh5cWCj5pOh9-UIc5V9_t2_LrmT56RccKWpNR0s5mm-IGCnHgW/NtNwqW-9qh0zueEKw9jQSZoVSI9QhpMC0U88XwgVxA0h8V8cdPJAbeDgRpZnKNdpqG9qdE-CBsvcnCsVFllNIWOOd-_DhM7CNRaVDKYJS7K-EfuTVimV-d0PnSoikI5_/H880-v7XrEC_MPiJ6a9tlul-6cL5NPtwqMgT9XGcwLCfNDWiZnZvP355YWL7swFtXOxZnIlmKPqE4y2APHUfnDGLv1b4fQgepFGHD0rO4pE=/), [**Zarchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver).
-
-Tapi saya sendiri memilih [**Zarchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver) karena alasan kenyamanan.
+Ada banyak sekali File Manager yang dapat digunakan, seperti [**MT Manager**](https://play.google.com/store/apps/details?id=np.filemanager.pro&hl=id&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Dmt+manager&pcampaignid=APPU_1_TFvIaZzfAdy64-EPhuGGuQU)[My Files](https://play.google.com/store/apps/details?id=np.filemanager.pro&hl=id&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Dmt+manager&pcampaignid=APPU_1_TFvIaZzfAdy64-EPhuGGuQU)), [**My Files**](https://play.google.com/store/apps/details?id=com.myfiles.filefolder.filemanager), [**Zarchiver**](https://play.google.com/store/apps/details?id=ru.zdevs.zarchiver).
 __________________________________________________
 
 **Hal Lain**
 
 Sebelum melakukan Kompilasi ada beberapa hal yg harus dilakukan dan diperhatikan !
 
-Untuk file game `Super Mario 64(USA).z64` ubah menjadi `baserom.us.z64`, lalu taruh di file direktori perangkat `/storage/emulated/0/`.
+Untuk file permainan `Super Mario 64(USA).z64` ubah nama berkas menjadi `baserom.us.z64`, lalu taruh di direktori perangkat `/storage/emulated/0/`.
 
 ![Gambar](https://i.imgur.com/AXjMMBB.png)
 
 >[!TIP]
-> Agar saat proses pengkompilasi tidak mengalami masalah, **jangan keluar dari aplikasi Termux**, kemudian **jangan menutup ataupun mengunci layar pernangkat**.
+> Agar saat proses pengkompilasi tidak mengalami masalah, **jangan keluar dari aplikasi Termux**, kemudian **jangan menutup ataupun mengunci layar perangkat**.
 __________________________________________________
 
 ## Persiapan
@@ -62,7 +57,7 @@ Ketikan atau salin perintah berikut:
 ```
 termux-change-repo
 ```
-lalu klik [Enter].
+lalu tekan [Enter].
 
 ![Gambar](https://i.imgur.com/mHfxFzl.jpeg)
 
