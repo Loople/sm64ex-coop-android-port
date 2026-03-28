@@ -22,12 +22,12 @@ __________________________________________________
 
 **ROM**
 
-Yang paling penting adalah sebuah file klon dari permainannya dengan format `Super Mario 64(USA).z64` untuk diporting agar dapat dimainkan di android. Ingat untuk mengunduh game berformat `.z64`.
+Yang paling penting adalah sebuah berkas klon dari permainannya dengan format `Super Mario 64(USA).z64` untuk diporting agar dapat dimainkan di android. Ingat untuk mengunduh permainan berformat `.z64`.
 
-Sayangnya saya tidak dapat membagikan file tersebut karna alasan [Hak Cipta](https://id.wikipedia.org/wiki/Hak_cipta). Jadi silahkan cari dari internet.
+Sayangnya saya tidak dapat membagikan berkas karna alasan [Hak Cipta](https://id.wikipedia.org/wiki/Hak_cipta). Jadi silahkan cari dari internet.
 
 >[!Penting]
-> Jika kamu mengunduh file permainan dengan format n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi eror.
+> Jika kamu mengunduh berkas permainan dengan format n64 dan mengubahnya menjadi z64. Maka saat proses kompilasi akan terjadi eror.
 __________________________________________________
 
 **File Manager**
@@ -39,7 +39,7 @@ __________________________________________________
 
 Sebelum melakukan Kompilasi ada beberapa hal yg harus dilakukan dan diperhatikan !
 
-Untuk file permainan `Super Mario 64(USA).z64` ubah nama berkas menjadi `baserom.us.z64`, lalu taruh di direktori perangkat `/storage/emulated/0/`.
+Untuk berkas permainan `Super Mario 64(USA).z64` ubah nama berkas menjadi `baserom.us.z64`, lalu taruh di direktori perangkat `/storage/emulated/0/`.
 
 ![Gambar](https://i.imgur.com/AXjMMBB.png)
 
@@ -119,7 +119,7 @@ pkg install git wget make python getconf zip apksigner clang binutils libglvnd-d
 ```
 lalu klik [Enter].
 
-Dengan perintah ini kamu akan menginstal alat yang diperlukan untuk mengkompilasi game nya dan juga memerlukan cukup ruang penyimpanan sebanyak `1006 MB` atau `1GB` untuk menginstal.
+Dengan perintah ini kamu akan menginstal alat yang diperlukan untuk mengkompilasi dan juga memerlukan cukup ruang penyimpanan sebanyak `1006 MB` atau `1GB` untuk menginstal.
 
 Jika diminta untuk mengkonfirmasi ketik `Y` lalu klik [Enter].
 
@@ -134,7 +134,7 @@ git clone https://github.com/robertkirkman/sm64ex-coop.git
 ```
 lalu klik [Enter].
 
-Ini akan mengklon repositori [robertkirkman](https://github.com/robertkirkman/sm64ex-coop) untuk mengkompilasi game agar berjalan di android.
+Ini akan mengklon repositori [robertkirkman](https://github.com/robertkirkman/sm64ex-coop) untuk mengkompilasi permainan agar berjalan di android.
 
 ![Gambar](https://i.imgur.com/dWVKja0.jpeg)
 __________________________________________________
@@ -147,7 +147,7 @@ cp /storage/emulated/0/baserom.us.z64 sm64ex-coop/baserom.us.z64
 ```
 lalu klik [Enter].
 
-ini akan mengklon file game dari file direktori perangkat ke repositori sm64ex coop dengan nama yang sama `baserom.us.z64`.
+ini akan mengklon file permainan dari file direktori perangkat ke repositori sm64ex coop dengan nama yang sama `baserom.us.z64`.
 
 ![Gambar](https://i.imgur.com/y2clxLx.jpeg)
 __________________________________________________
@@ -173,7 +173,7 @@ git pull
 ```
 lalu klik [Enter].
 
-ini hanya akan memperbarui game dan git yang telah di pasang `jika diperlukan`.
+ini hanya akan memperbarui permainan dan git yang telah di pasang `jika diperlukan`.
 
 __________________________________________________
 
@@ -185,7 +185,7 @@ git submodule update --init --recursive
 ```
 lalu klik [Enter].
 
-ini akan mengupdate file CoopNet yang dibutuhkan sm64ex coop untuk tersambung ke server. agar terhindar dari masalah atau eror saat proses kompilasi.
+ini akan mengupdate berkas CoopNet yang dibutuhkan sm64ex coop untuk tersambung ke server. agar terhindar dari masalah atau eror saat proses kompilasi.
 __________________________________________________
 
 ## Mengompilasi Game
@@ -200,7 +200,7 @@ lalu klik [Enter].
 
 Setelah perintah dijalankan itu akan membutuhkan waktu yg sedikit lama. Jika tidak ada kesalahan atau eror maka proses kompilasi berhasil.
 
-Selanjutnya kita perlu mengklon sm64ex coop yaitu `sm64ex.us.apk`ke file direktori perangkat.
+Selanjutnya kita perlu mengklon sm64ex coop yaitu `sm64ex.us.apk`ke direktori perangkat.
 
 Ketikan atau salin perintah berikut:
 ```
@@ -217,7 +217,7 @@ __________________________________________________
 
 Jika suatu hari gamenya mengupdate ke versi terbaru, kita bisa mengupdatenya sendiri.
 
-untuk itu kalian jangan menghapus termux ataupun file didalamnya karena akan berguna untuk mengupdate gamenya
+untuk itu kalian jangan menghapus termux ataupun berkas didalamnya karena akan berguna untuk mengupdate gamenya
 
 Ketikan atau salin perintah berikut:
 ```
@@ -237,7 +237,7 @@ make distclean
 ```
 lalu klik [Enter].
 
-lalu update file game, git, dan juga file coopnet nya juga dengan perintah:
+lalu update berkas permainan, git, dan juga berkas coopnet nya juga dengan perintah:
 ```
 git pull
 ```
@@ -249,17 +249,17 @@ git submodule update --init --recursive
 ```
 lalu klik [Enter].
 
-lalu kompilasikan gamenya dengan perintah:
+lalu kompilasikan permainannya dengan perintah:
 ```
 make
 ```
 lalu klik [Enter].
 
-kini tinggal mengklon gamenya ke dalam file direktori perangkat dengan perintah:
+kini tinggal mengklon permainannya ke dalam direktori perangkat dengan perintah:
 ```
 cp build/us_pc/sm64.us.apk /storage/emulated/0
 ```
 lalu klik [Enter].
 
-Buka File Manager dan instal gamenya seperti sebelumnya, dan kalian punya gamenya dalam versi terbaru.
+Buka File Manager dan instal permainannya seperti sebelumnya, dan kalian punya permainannya dalam versi terbaru.
 __________________________________________________
