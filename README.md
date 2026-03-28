@@ -14,7 +14,7 @@ __________________________________________________
 
 Diperlukan aplikasi Termux, sebuah aplikasi Terminal Linux untuk Android.
 
-Bisa didapatkan di internet, namun disarankan menggunakn [Termux dari F-droid](https://f-droid.org/repo/com.termux_118.apk), atau [Termux Monet](https://github.com/HardcodedCat/termux-monet/releases/latest).
+Bisa didapatkan di internet, namun disarankan menggunakn [Termux dari F-droid](https://f-droid.org/repo/com.termux_118.apk).
 
 > [!NOTE]
 > Aplikasi Termux dari PlayStore sudah kadaluarsa dan tidak berfungsi, jadi disarankan menggunakan Termux dari link diatas.
