@@ -134,7 +134,7 @@ git clone https://github.com/robertkirkman/sm64ex-coop.git
 ```
 lalu klik [Enter].
 
-Ini akan mengklon repositori OWOKITTY untuk mengkompilasi game agar berjalan di android.
+Ini akan mengklon repositori [robertkirkman](https://github.com/robertkirkman/sm64ex-coop) untuk mengkompilasi game agar berjalan di android.
 
 ![Gambar](https://i.imgur.com/dWVKja0.jpeg)
 __________________________________________________
